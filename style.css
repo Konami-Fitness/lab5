@@ -1,5 +1,6 @@
 html * {
   box-sizing: border-box;
+  font-family: "Baloo 2", helvetica, sans-serif;
 }
 
 body {
@@ -9,35 +10,12 @@ body {
   background-color: #fbfbfc;
 }
 
-h1 {
+.header {
   text-align: center;
   margin: auto;
 }
 
-.fleft {
-  float: left;
-}
-
-.left {
-  width: 25%;
-}
-
-.middle {
-  width: 50%
-}
-
-.right {
-  width: 25%;
-}
-
-.hidden3 {
-  display: none;
-}
-
-.hidden4 {
-  display: none;
-}
-
-.hidden5 {
-  display: none;
+#play {
+  background-color: #906d94;
+  color: white;
 }
