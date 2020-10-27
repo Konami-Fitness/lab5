@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Hexed Game</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+		<script type="text/javascript" src="lab5.js"></script>
+	</head>
+	<body>
+		<h1>Enter name and number of turns.</h1>
+		<form name="settingsform" action="" onsubmit="return validateForm()" method="post">
+			<label for="name">Name:</label><br>
+			<input type="text" id="name" name="name"><br>
+			<label for="numturns">Number of Turns:</label><br>
+			<input type="text" id="numturns" name="numturns"><br>
+			<input type="submit" value="Submit">
+		</form>
+	</body>
+</html>
