@@ -1,0 +1,44 @@
+/* Teddy Clark clarke4 */
+html * {
+  box-sizing: border-box;
+}
+
+body {
+  width: 95%;
+  border: 2px solid #e7e2f2;
+  padding: 0px;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+  margin: auto;
+}
+
+.fleft {
+  float: left;
+}
+
+.left {
+  width: 25%;
+}
+
+.middle {
+  width: 50%
+}
+
+.right {
+  width: 25%;
+}
+
+.hidden3 {
+  display: none;
+}
+
+.hidden4 {
+  display: none;
+}
+
+.hidden5 {
+  display: none;
+}
