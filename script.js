@@ -103,7 +103,10 @@ document.getElementById('colors').addEventListener('submit', function(e) {
   // Show Result
   if(x == colorObj.red && y == colorObj.green && z == colorObj.blue) {
   	jq('html').css('background-color','black');
-  	jq('p#congrats').html("Congrats!").css({"color":"gold", "font-size":"100px"});
+  	jq('p#congrats').html("Congrats!").css({"color":"gold", "font-size":"100px", "text-align":"center"});
+  	jq('.colorswatch').hide();
+  	jq('#colors').hide();
+  	jq('h1').hide();
   	alert("you won!");
   } else {
   	alert("try again!");
