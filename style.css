@@ -1,7 +1,8 @@
 html * {
   box-sizing: border-box;
   font-family: "Baloo 2", helvetica, sans-serif;
- background-color:red;
+  background-color: rgba(0, 252, 239, 0.747);
+  overflow: hidden;
 }
 
 html {
@@ -12,6 +13,13 @@ body {
   margin: auto;
   height: 100%;
 }
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 h2 {
   margin: 0px;
   font-size: 50px;
@@ -26,7 +34,16 @@ h1 {
   text-shadow: 4px 4px 2px #404040;
   margin-bottom: 30px;
 }
-button {
+
+.play-title {
+  margin-top: 1rem;
+}
+
+input {
+  background-color: #ffffff;
+}
+
+#play {
   font-size: 20px;
   border-radius: 5px;
   background-color: #8675a9;
@@ -44,24 +61,86 @@ button {
 .header {
   margin: auto;
   text-align: center;
-	margin-top: 80px;
-	margin-bottom: 35px;
-	padding: 32px;
-	border-radius: 5px;
+  margin-top: 80px;
+  margin-bottom: 35px;
+  padding: 32px;
+  border-radius: 5px;
   color: black;
 }
 
 .colorswatch {
-	display: block;
-  margin-left: 700px;
+  display: block;
   border: solid;
-	height: 100px;
-	width: 100px;
+  height: 10rem;
+  width: 10rem;
 }
 
-#red, #green, #blue {
+#red,
+#green,
+#blue {
   float: left;
   clear: left;
   width: 300px;
   margin: 15px;
+}
+
+.sButtons {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#colors {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#red-label {
+  color: red;
+  font-weight: bold;
+}
+
+#blue-label {
+  color: blue;
+  font-weight: bold;
+}
+
+#green-label {
+  color: green;
+  font-weight: bold;
+}
+
+.slider {
+  float: left;
+  clear: left;
+  width: 20rem;
+  margin: 1rem;
+  height: 10rem;
+}
+
+#red-slide .ui-slider-range {
+  background: #ef2929;
+}
+
+#red-slide .ui-slider-handle {
+  border-color: #ef2929;
+}
+
+#green-slide .ui-slider-range {
+  background: green;
+}
+#green-slide .ui-slider-handle {
+  border-color: green;
+}
+
+#blue-slide .ui-slider-range {
+  background: blue;
+}
+.blue-slide .ui-slider-handle {
+  border-color: blue;
 }

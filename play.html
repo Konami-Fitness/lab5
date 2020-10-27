@@ -3,67 +3,42 @@
   <head>
     <title>Nested columns</title>
     <link rel=stylesheet href="style.css"/>
+    <link rel="stylesheet" href="jquery-ui-1.12.1.custom/jquery-ui.css">
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
   <body>
-    <h1>Hexed!</h1>
-        <div class="colorswatch">
-
+    <div class="main">
+      <h1 class="play-title">Hexed!</h1>
+      <div class="colorswatch"></div>
+      <p id="congrats"></p>
+      <form id="colors" action="">
+        <div class="form-group">
+          <label id="red-label" for="red">Red: </label>
+          <input type="number" name="red" class="form-control" id="red">
+          <div id="red-slide" class="slider"></div>
+        </div>
+        <div class="form-group">
+          <label id="green-label" for="green">Green: </label>
+          <input type="number" name="green" class="form-control" id="green">
+          <div id="green-slide" class="slider"></div>
+        </div>
+        <div class="form-group">
+          <label id="blue-label" for="blue">Blue: </label>
+          <input type="number" name="blue" class="form-control" id="blue">
+          <div id="blue-slide" class="slider"></div>
+        </div>
+        <div class="sButtons">
+          <input type="submit" value="Guess!" class="btn btn-default">
+          <input type="reset" value="Reset" class="btn btn-default">
+        </div>
+      </form>
+      <div class="result">
+        <p id="r1">RGB Value: </p>
+      </div>
+      <p id="demo"></p>
+      <div class="game"></div>
     </div>
-
-
-<p id="congrats"></p>
-<form id="colors" action="">
-  <div class="form-group">
-    <label for="red">Red: </label>
-    <input type="number" name="red" class="form-control" id="red">
-  </div>
-
-  <div class="form-group">
-    <label for="green">Green: </label>
-    <input type="number" name="green" class="form-control" id="green">
-  </div>
-
-  <div class="form-group">
-    <label for="blue">Blue: </label>
-    <input type="number" name="blue" class="form-control" id="blue">
-  </div>
-
-
-  <div class="sButtons">
-    <input type="submit" value="Guess!" class="btn btn-default">
-    <input type="reset" value="Reset" class="btn btn-default">
-  </div>
-
-</form>
-
-<div>
-  <input type="range" name="tred" id="tred" min="0" max="255">
-
-</div>
-<div id="tgreen"></div>
-<div id="tblue"></div>
-
-<div class="result">
-  <p id="r1"></p>
-</div>
-
-
-​
-<p id="demo"></p>
-    <div class="game">
-
-
-
-    </div>
-
-
-
-
-
-
   </body>
-      <script src="script.js"></script>
-
+  <script src="script.js"></script>
 </html>
