@@ -1,6 +1,6 @@
 
 
-		
+
 
 
 var jq = jQuery.noConflict();
@@ -11,31 +11,30 @@ var jq = jQuery.noConflict();
            var x = Math.floor(Math.random() * 256); // range is 0-255
     		var y = Math.floor(Math.random() * 256);
     		var z = Math.floor(Math.random() * 256);
-    		var thergb = "rgb(" + x + "," + y + "," + z + ")"; 
+    		var thergb = "rgb(" + x + "," + y + "," + z + ")";
 
 			jq(this).css("background-color",thergb);		});*/
 
-var colorObj = {
-	red: 0,
-	green: 0,
-	blue: 0
-};
-				function setColor() {
+  var colorObj = {
+  	red: 0,
+  	green: 0,
+  	blue: 0
+  };
 
-           var x = Math.floor(Math.random() * 256); // range is 0-255
-    		var y = Math.floor(Math.random() * 256);
-    		var z = Math.floor(Math.random() * 256);
-    		var thergb = "rgb(" + x + "," + y + "," + z + ")"; 
+  function setColor() {
+    var x = Math.floor(Math.random() * 256); // range is 0-255
+		var y = Math.floor(Math.random() * 256);
+		var z = Math.floor(Math.random() * 256);
+		var thergb = "rgb(" + x + "," + y + "," + z + ")";
 
-    		var colors = new Array(x, y, z);
-			jq(".colorswatch").css("background-color",thergb);	
-			colorObj.red = colors[0];
-			colorObj.green = colors[1];
-			colorObj.blue = colors[2];
-			 
-			 jq("#r1").html(thergb);
-
-				}
+    var colors = new Array(x, y, z);
+		jq(".colorswatch").css("background-color",thergb);
+		colorObj.red = colors[0];
+		colorObj.green = colors[1];
+		colorObj.blue = colors[2];
+    
+		jq("#r1").html(thergb);
+	}
 
 
 
@@ -47,7 +46,7 @@ setColor();
 
 	 function printColor() {
 	 	var arr = setColor();
-	 
+
 	   jq(".colorswatch").after("red: " + arr[0] + " green: " + arr[1] + " blue: " + arr[2]);
 
 
@@ -84,22 +83,22 @@ jq('#blue').on('input', function() {
 
 
 
-var rgb = "rgb(" + values[0] + "," + values[1] + "," + values[2] + ")"; 
+var rgb = "rgb(" + values[0] + "," + values[1] + "," + values[2] + ")";
 
-jq(".colorswatch").css("background-color",rgb);	
+jq(".colorswatch").css("background-color",rgb);
 
 */
 
 document.getElementById('colors').addEventListener('submit', function(e) {
   e.preventDefault();
-  
+
   // your code here
   var x = document.getElementById('red').value;
   var y = document.getElementById('green').value;
   var z = document.getElementById('blue').value;
 
   // Calculation
-  var rgb = "rgb(" + x + "," + y + "," + z + ")"; 
+  var rgb = "rgb(" + x + "," + y + "," + z + ")";
   // Show Result
   if(x == colorObj.red && y == colorObj.green && z == colorObj.blue) {
   	jq('html').css('background-color','black');
@@ -111,7 +110,7 @@ document.getElementById('colors').addEventListener('submit', function(e) {
   } else {
   	alert("try again!");
   }
-  //jq(".colorswatch").css("background-color",rgb);	
+  //jq(".colorswatch").css("background-color",rgb);
 
   return false;
 });
@@ -180,7 +179,3 @@ $( function() {
     $( "#amount" ).val( $( "#red" ).slider( "value" ) );
   } );*/
 });
-
-
-
-
