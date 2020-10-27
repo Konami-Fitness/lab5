@@ -15,6 +15,11 @@ var jq = jQuery.noConflict();
 
 			jq(this).css("background-color",thergb);		});*/
 
+var colorObj = {
+	red: 0,
+	green: 0,
+	blue: 0
+};
 				function setColor() {
 
            var x = Math.floor(Math.random() * 256); // range is 0-255
@@ -24,10 +29,18 @@ var jq = jQuery.noConflict();
 
     		var colors = new Array(x, y, z);
 			jq(".colorswatch").css("background-color",thergb);	
-			return colors
+			colorObj.red = colors[0];
+			colorObj.green = colors[1];
+			colorObj.blue = colors[2];
+			 
+			 jq("#r1").html(thergb);
+
 				}
 
-				setColor();
+
+
+setColor();
+
 /*
 
 
@@ -43,11 +56,7 @@ var jq = jQuery.noConflict();
 			setColor();
 			printColor();*/
 /*
-var colorObj = {
-	red: 0,
-	green: 0,
-	blue: 0
-};
+
 
 jq('#red').on('input', function() {
 	var input=jq(this);
@@ -92,8 +101,14 @@ document.getElementById('colors').addEventListener('submit', function(e) {
   // Calculation
   var rgb = "rgb(" + x + "," + y + "," + z + ")"; 
   // Show Result
-  jq(".colorswatch").css("background-color",rgb);	
-  document.getElementById("r1").innerHTML = rgb;
+  if(x == colorObj.red && y == colorObj.green && z == colorObj.blue) {
+  	jq('html').css('background-color','black');
+  	jq('p#congrats').html("Congrats!").css({"color":"gold", "font-size":"100px"});
+  	alert("you won!");
+  } else {
+  	alert("try again!");
+  }
+  //jq(".colorswatch").css("background-color",rgb);	
 
   return false;
 });
