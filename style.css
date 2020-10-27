@@ -1,6 +1,7 @@
 html * {
   box-sizing: border-box;
   font-family: "Baloo 2", helvetica, sans-serif;
+ background-color:red;
 }
 
 html {
