@@ -3,10 +3,10 @@ html * {
 }
 
 body {
-  width: 95%;
-  border: 2px solid #e7e2f2;
   padding: 0px;
   margin: auto;
+  background-image: url("modern.jpeg");
+  background-color: #fbfbfc;
 }
 
 h1 {
