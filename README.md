@@ -1,6 +1,12 @@
 # lab5
 Henry Claisse, Teddy Clark, Michael Kokkatt, Shane Riggs
 
+
+***Quick Note: Running  play2.html will 
+have the right functionality for the lab and running the play.html will have most of the right functionality 
+and has a good emphasis on the styling of the page.***
+
+
 Gameplay:
 We used Math.random() to generate random values for red, blue and green color values. Then
 we concatenated those values to create a color value for the color swatch that the user
@@ -18,10 +24,16 @@ The sliders were made using JQuery's .slider widget and were synced to the numbe
 change their guess without having to manually type in numbers, and instead use a horizontal slider to either 
 increase or decrease the values of their guesses.
 
-Unfortunately we were not able to connect the plugin to the html and maintain the proper css.
+Unfortunately we were not able to connect the jquery plugin we tailored to the html and maintain the proper css.
 In order to demonstate both the plugin and css, we created two separate files where files ending
 in "2" indicate that those files have the proper plugin functionality, while those without
-a "2" have the most of the functionality and page design considerations.
+a "2" have the most of the functionality and page design considerations. Running the play2.html will 
+have the right functionality for the lab and running the play.html will have most of the right functionality 
+and has a good emphasis on the styling of the page.
+
+To initialize the game using the jquery plugin which we named hexed, we wrapped all our jquery code into
+that function hexed and then called the hexed function on a div tag in our html with the attributes of 
+the setting, game and color objects. 
 
 For creativity, we created a landing page separate from the actual play page to model professional
 applications. Then, we separated the settings page from the game play page for separation of
