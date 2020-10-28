@@ -12,3 +12,7 @@ and checks the value matches the randomly generated  are correct. If they are, i
 the player that they have won. If the values do not match, the JavaScript runs the
 percentOff function for each of the 3 guesses from the player. These percentages are then
 displayed below the game.
+
+The sliders were made using JQuery's .slider widget and were synced to the numbers to allow players to 
+change their guess without having to manually type in numbers, and instead use a horizontal slider to either 
+increase or decrease the values of their guesses.
