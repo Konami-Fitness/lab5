@@ -1,6 +1,6 @@
 var jq = jQuery.noConflict();
 jq(document).ready(function(){
-    
+
 
   var colorObj = {
     red: 0,
@@ -8,12 +8,31 @@ jq(document).ready(function(){
     blue: 0
   };
 
+	var color = {
+		red: 0,
+		green: 0,
+		blue: 0
+	};
+
+	var player = {
+		name: "guest",
+		round: 0,
+		score: 0
+	};
+
+	document.getElementById("settingsform").addEventListener("submit", function(e) {
+		e.preventDefault();
+		player.name = document.getElementById("fname").value;
+		alert(player.name);
+		location.replace("play.html");
+	});
+	
   var game = {
 
 //include timer and round tracker
 
   }
-        
+
     function get_elapsed_time_string(total_seconds) {
   function pretty_time_string(num) {
     return ( num < 10 ? "0" : "" ) + num;
@@ -68,7 +87,7 @@ setInterval(function() {
     value: 0
   });
 
-  
+
   jq('#red').on('input', function() {
     let input=jq(this);
     jq('#red-slide').slider('value', input.val())
@@ -82,21 +101,21 @@ setInterval(function() {
     jq('#blue-slide').slider('value', input.val());
   });
   jq('#red-slide').slider({
-    change: function(event, ui) { 
+    change: function(event, ui) {
        jq("#red").val(ui.value)
-    } 
+    }
   })
   jq('#green-slide').slider({
-    change: function(event, ui) { 
+    change: function(event, ui) {
        jq("#green").val(ui.value)
-    } 
+    }
   })
   jq('#blue-slide').slider({
-    change: function(event, ui) { 
+    change: function(event, ui) {
        jq("#blue").val(ui.value)
-    } 
+    }
   })
-    
+
 
 function percentOff(guess, correct) {
 
@@ -128,7 +147,7 @@ function percentOff(guess, correct) {
 
       var percentOffGreen = percentOff(y, colorObj.green);
       var percentOffBlue = percentOff(z, colorObj.blue);
-      jq('.stats').html("Red: " + percentOffRed + "% off" + "<br>" + 
+      jq('.stats').html("Red: " + percentOffRed + "% off" + "<br>" +
                        "Green: " + percentOffGreen + "% off" + "<br>"  +
                        "Blue: " + percentOffBlue + "% off");
       alert("try again!");
