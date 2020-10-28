@@ -83,9 +83,10 @@ input[type=submit] {
 }
 
 .settings{
+  display: none;
   margin: auto;
 	width: 420px;/* 420px; */
-	height: 320px; /* 595px */
+	height: 420px; /* 595px */
 	margin-top: 100px;
 	margin-bottom: 35px;
 	padding: 32px;
