@@ -40,16 +40,36 @@ label {
   text-shadow: 2px 2px 2px #404040;
 }
 
+
+nav ul li {
+  float: left;
+  display: block;
+  text-align: center;
+  background-color: #8675a9;
+  color: white;
+  margin-left: 50px;
+  padding: 5px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+nav::after {
+  clear: both;
+}
+
 #red-label {
   color: red;
 }
 
 #blue-label {
-  color: green;
+  color: blue;
 }
 
 #green-label {
-  color: blue;
+  color: green;
 }
 
 input[type=text], input[type=number] {
@@ -104,6 +124,17 @@ input[type=reset] {
 }
 
 .settings{
+  margin: auto;
+	width: 420px;/* 420px; */
+	height: 390px; /* 595px */
+	margin-top: 100px;
+	margin-bottom: 35px;
+	padding: 32px;
+	border-radius: 10px;
+	background-color: #fbfbfc;
+}
+
+.settings2{
   display: none;
   margin: auto;
 	width: 420px;/* 420px; */
@@ -116,7 +147,9 @@ input[type=reset] {
 }
 
 .play-title {
-  margin: 40px 0px;
+  margin: auto;
+  margin: 0px;
+  display: block;
 }
 
 .colorswatch {
@@ -129,7 +162,6 @@ input[type=reset] {
 
 .form-group {
   float: left;
-
   margin-right: 100px;
 }
 
@@ -165,9 +197,9 @@ input[type=reset] {
 }
 
 #sub-button {
-  display: inline-block;
+  margin: 10px 0px;
 }
 
 #reset-button {
-  display: inline-block;
+  margin: 0px;
 }
