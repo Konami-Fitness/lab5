@@ -10,14 +10,25 @@ jq(document).ready(function(){
 
   var game = {
     time:"00:00:00",
-    round:0
+    round:1,
+    milliseconds: 0,
+    prev_milliseconds: 0
 
 //include timer and round tracker
 
   };
 
+function toMillisec(h,m,s) {
+  return s*1000 + m*60*1000 + h*60*60*1000;
+}
 
+function getScore(red,green,blue,milliseconds) {
+  return ((300 - (red + green + blue)) * ((20000 - milliseconds) < 0 ? 0 : (20000 - milliseconds)));
+
+}
         
+
+
     function get_elapsed_time_string(total_seconds) {
   function pretty_time_string(num) {
     return ( num < 10 ? "0" : "" ) + num;
@@ -30,6 +41,8 @@ jq(document).ready(function(){
   total_seconds = total_seconds % 60;
 
   var seconds = Math.floor(total_seconds);
+
+  game.milliseconds = toMillisec(hours, minutes, seconds);
 
   // Pad the minutes and seconds with leading zeros, if required
   hours = pretty_time_string(hours);
@@ -60,7 +73,7 @@ var timer = setInterval(function() {
     colorObj.green = colors[1];
     colorObj.blue = colors[2];
     //this line below will reveal value of randomly generated color
-   jq("#r1").html(thergb);
+ //  jq("#r1").html(thergb);
   }
 
   setColor();
@@ -124,30 +137,41 @@ function stopTime() {
     var rgb = "rgb(" + x + "," + y + "," + z + ")";
     // Show Result
     if(x == colorObj.red && y == colorObj.green && z == colorObj.blue) {
-      jq('html').css('background-color','black');
-      jq('p#congrats').html("Congrats!").css({"color":"gold", "font-size":"100px", "text-align":"center"});
+       stopTime();
+
+        jq('.score').html("Score" + getScore(0,0,0, game.milliseconds - game.prev_milliseconds));
+
+     /*
       jq('.colorswatch').hide();
       jq('#colors').hide();
       jq('h1').hide();
-      game.round++;
-            stopTime();
-
+     */
 
       alert("you won!");
     } else {
+      
+     
+
+alert("Entering round" + game.round + ". Try again!");
       var percentOffRed = percentOff(x, colorObj.red);
 
       var percentOffGreen = percentOff(y, colorObj.green);
       var percentOffBlue = percentOff(z, colorObj.blue);
+      if(jq('.score').html() < getScore(percentOffRed,percentOffGreen,percentOffBlue, game.milliseconds - game.prev_milliseconds) ) {
+        jq('.score').html("Score: " + getScore(percentOffRed,percentOffGreen,percentOffBlue, game.milliseconds - game.prev_milliseconds));
+      }
       jq('.stats').html("Red: " + percentOffRed + "% off" + "<br>" + 
                        "Green: " + percentOffGreen + "% off" + "<br>"  +
                        "Blue: " + percentOffBlue + "% off");
-      alert("try again!");
+        game.prev_milliseconds = game.milliseconds;
+    
+            game.round++;
     }
     //jq(".colorswatch").css("background-color",rgb);
 
     return false;
   });
+
 
 
 });
