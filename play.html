@@ -26,37 +26,42 @@
       <div class="colorswatch"></div>
       <p id="congrats"></p>
       <form id="colors" action="">
-        <div class="form-group">
+        <div class="form-group" class="group-red">
           <label id="red-label" for="red">Red: </label><br>
-          <input type="number" name="red" class="form-control" id="red"><br>
+          <input type="number" name="red" class="form-control" id="red"><br><br><br><br>
           <div id="red-slide" class="slider"></div><br>
         </div>
-        <div class="form-group">
+        <div class="form-group" class="group-green">
           <label id="green-label" for="green">Green: </label><br>
-          <input type="number" name="green" class="form-control" id="green"><br>
+          <input type="number" name="green" class="form-control" id="green"><br><br><br><br>
           <div id="green-slide" class="slider"></div><br>
         </div>
-        <div class="form-group">
+        <div class="form-group" class="group-blue">
           <label id="blue-label" for="blue">Blue: </label><br>
-          <input type="number" name="blue" class="form-control" id="blue"><br>
+          <input type="number" name="blue" class="form-control" id="blue"><br><br><br><br>
           <div id="blue-slide" class="slider"></div><br>
         </div>
+      </form>
+      <form action="">
         <div class="sButtons">
-          <input type="submit" value="Guess!" class="btn btn-default">
-          <input type="reset" value="Reset" class="btn btn-default">
+          <input type="submit" value="Guess!" class="btn btn-default" id="sub-button">
+          <input type="reset" value="Reset" class="btn btn-default" id="reset-button">
         </div>
       </form>
-      <div class="result">
-        <p id="r1">RGB Value: </p>
-      </div>
-
       <div class="stats">
-      </div>
+        <div class="result">
+          <p id="r1">RGB Value: </p>
+        </div>
 
-      <div id="box_header">
+        <div class="stats">
+        </div>
+
+        <div id="box_header">
+        </div>
+        <div class="game"></div>
       </div>
-      <div class="game"></div>
     </div>
   </body>
+  <script src="index.js"></script>
   <script src="script.js"></script>
 </html>

@@ -17,12 +17,6 @@ jq(document).ready(function(){
 		score: 0
 	};
 
-	document.getElementById("settingsform").addEventListener("submit", function(e) {
-		e.preventDefault();
-		player.name = document.getElementById("fname").value;
-		location.replace("play.html");
-	});
-
   function get_elapsed_time_string(total_seconds) {
   	function pretty_time_string(num) {
     	return ( num < 10 ? "0" : "" ) + num;
