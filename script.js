@@ -1,6 +1,17 @@
 var jq = jQuery.noConflict();
 jq(document).ready(function(){
     
+  var player = {
+    name: "guest",
+    score: 0
+  };
+
+  document.getElementById("settingsform").addEventListener("submit", function(e) {
+    e.preventDefault();
+    player.name = document.getElementById("fname").value;
+    game.total_rounds = document.getElementById("rounds").value;
+  });
+  
 
   var colorObj = {
     red: 0,
@@ -11,6 +22,7 @@ jq(document).ready(function(){
   var game = {
     time:"00:00:00",
     round:1,
+    total_rounds: 1,
     milliseconds: 0,
     prev_milliseconds: 0
 
@@ -150,7 +162,12 @@ function stopTime() {
       alert("you won!");
     } else {
       
-     
+     if(game.total_rounds == game.round) {
+        alert(game.total_rounds);
+        alert(game.round);
+       stopTime();
+       return false;
+     }
 
 alert("Entering round" + game.round + ". Try again!");
       var percentOffRed = percentOff(x, colorObj.red);

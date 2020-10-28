@@ -10,6 +10,18 @@
   <script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
   </head>
   <body>
+    <div class="background">
+      <div class="settings">
+        <h3>Settings</h3>
+        <form action="" id="settingsform" autocomplete="on">
+          <label for="fname">Name</label><br>
+          <input type="text" id="fname" name="fname" value="guest" autofocus><br>
+             <label for="rounds">Rounds</label><br>
+          <input type="text" id="rounds" name="rounds" value="guest" autofocus><br>
+          <input type="submit" value="New Game"><br><br>
+        </form>
+      </div>
+
     <div class="main">
       <h1 class="play-title">Hexed!</h1>
       <div class="colorswatch"></div>
@@ -47,6 +59,7 @@
       </div>
       <div class="game"></div>
     </div>
+  </div>
   </body>
   <script src="script.js"></script>
 </html>
