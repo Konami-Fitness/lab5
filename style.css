@@ -93,12 +93,20 @@ input[type=submit] {
 	background-color: #fbfbfc;
 }
 
+.play-title {
+  margin: 40px 0px;
+}
+
 .colorswatch {
 	display: block;
-  margin-left: 700px;
+  margin: auto;
   border: solid;
 	height: 100px;
 	width: 100px;
+}
+
+.form-group {
+  float: left;
 }
 
 #play {
