@@ -12,9 +12,3 @@ h1 {
 	color:blue;
 }
 
- #red, #green, #blue {
-    float: left;
-    clear: left;
-    width: 300px;
-    margin: 15px;
-  }
