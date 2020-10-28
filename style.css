@@ -36,6 +36,22 @@ h3 {
   text-shadow: 3px 3px 2px #404040;
 }
 
+label {
+  text-shadow: 2px 2px 2px #404040;
+}
+
+#red-label {
+  color: red;
+}
+
+#blue-label {
+  color: green;
+}
+
+#green-label {
+  color: blue;
+}
+
 input[type=text], input[type=number] {
   height: 48px;
 	width: 100%;
