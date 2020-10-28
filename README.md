@@ -1,4 +1,5 @@
 # lab5
+Henry Claisse, Teddy Clark, Michael Kokkatt, Shane Riggs
 
 Gameplay:
 We used Math.random() to generate random values for red, blue and green color values. Then
