@@ -54,7 +54,7 @@ input[type=text]:focus, input[type=number]:focus {
   border: 2px solid #8675a9;
 }
 
-input[type=submit] {
+input[type=submit], input[type=reset] {
 	height: 50px;
 	width: 100%;
 	border: none;
@@ -63,6 +63,10 @@ input[type=submit] {
 	margin: 40px 0px 15px 0px;
 	color: white;
   font-size: 20px;
+}
+
+input[type=reset] {
+  background-color: red;
 }
 
 .background {
@@ -84,7 +88,7 @@ input[type=submit] {
 }
 
 .settings{
-display: none;
+  display: none;
   margin: auto;
 	width: 420px;/* 420px; */
 	height: 390px; /* 595px */
@@ -109,7 +113,22 @@ display: none;
 
 .form-group {
   float: left;
-  margin-right: 20px;
+
+  margin-right: 100px;
+}
+
+.group-red, .group-green, .group-blue {
+  width: 33%;
+}
+
+.sButtons {
+  margin:auto;
+  width: 150px;
+}
+
+.stats {
+  margin-left: 80px;
+  width: 200px;
 }
 
 #play {
@@ -122,4 +141,17 @@ display: none;
   clear: left;
   width: 300px;
   margin: 15px;
+}
+
+#colors {
+  margin: auto;
+  width: 90%;
+}
+
+#sub-button {
+  display: inline-block;
+}
+
+#reset-button {
+  display: inline-block;
 }
